@@ -1,0 +1,30 @@
+<nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i class="fas fa-bars"></i>
+  </label>
+    <%= link_to image_tag("/images/Logo.png", :alt => "Le Passager des Vents", :class => "css"), root_path %>
+    <ul class="content-navbar">
+      <li>
+        <%= link_to "Atelier", atelier_path, class: "navbar-brand" %>
+      </li>
+      <li>
+      <div class="dropdown">
+          <%= link_to "Nos instruments", instruments_path, class: "navbar-brand" %>
+            <ul id="sub-menu" class="dropdown-content">
+              <li><%= link_to "Vents", instruments_vents_path, title: "Vents"%></li>
+              <li><%= link_to "Cuivres", instruments_cuivres_path, title: "Cuivres"%></li>
+            </ul>
+        </div>
+      </li>
+      <li>
+        <%= link_to "Qui sommes-nous?", qui_sommes_nous_path, class: "navbar-brand" %>
+      </li>
+      <li>
+        <%= link_to "Presse", presse_path, class: "navbar-brand" %>
+      </li>
+      <li>
+        <%= link_to "Contact", contact_path, class: "navbar-brand" %>
+      </li>
+    </ul>
+</nav>
